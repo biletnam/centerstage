@@ -43,7 +43,7 @@ The system implements the following interface.
         String reserveSeats(int seatHoldId, String customerEmail);
     }
 
-Most of the heavy lifting is done by the _com.challenge.centerstage.ticketservice.domain.PerformanceVenue.java_ class. Required variables and methods have been made Thread-Safe to handle concurrent requests.
+Most of the heavy lifting is done by the **_com.challenge.centerstage.ticketservice.domain.PerformanceVenue.java_** class. Required variables and methods have been made Thread-Safe to handle concurrent requests.
 
 There are few **assumptions** that the system makes.
 

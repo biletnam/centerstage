@@ -239,7 +239,7 @@ public class PerformanceVenue {
         return seatsPerRowCount;
     }
 
-    public String[][] getSeatReservedMatrix() {
+    public synchronized String[][] getSeatReservedMatrix() {
         return seatReservedMatrix;
     }
 }
