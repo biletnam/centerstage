@@ -53,7 +53,7 @@ There are few **assumptions** that the system makes.
 - The service can stay open till all seats have been reserved. 
 
 
-### Running Examples
+### Building and running the tests and simulation.
 - Requires JDK 8.
 - Download the zip or clone the Git repository.
 - Unzip the zip file (if you downloaded one)
