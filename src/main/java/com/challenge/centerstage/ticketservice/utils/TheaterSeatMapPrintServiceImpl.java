@@ -15,7 +15,7 @@ public class TheaterSeatMapPrintServiceImpl implements TheaterSeatMapPrintServic
 
         for (int i = 0; i < performanceVenue.getSeatReservedMatrix().length; i++) {
             for (int j = 0; j < performanceVenue.getSeatReservedMatrix()[i].length; j++) {
-                System.out.print((performanceVenue.getSeatReservedMatrix())[i][j].substring(0, 3) + " ");
+                System.out.print((performanceVenue.getSeatReservedMatrix())[i][j].length() > 1 ? (performanceVenue.getSeatReservedMatrix())[i][j].substring(0, 3) + " " : (performanceVenue.getSeatReservedMatrix())[i][j] + " ");
             }
             System.out.println();
         }
