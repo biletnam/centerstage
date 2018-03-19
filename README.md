@@ -70,7 +70,7 @@ There are few **assumptions** that the system makes.
 - You are all set to see the simulation.
 
 - The application will run a simulation for concurrent booking requests.
-    - The application will generate a random set hold request between (1 and (Number of seats per row + 5)).
+    - The application will generate a concurrent hold request with random number of seats to hold, ranging between (1 and (Number of seats per row + 5)).
     - The application will hold the seats on behalf of customer for an random period of time between (1sec and holdExpiry secs).
     - The application will log all requests and responses.
-    - At the end when the Venue is sold out, the application will print the reservation seat map with reservation confirmation ID. 
+    - When the Venue is sold out, the application will print the reservation seat map with reservation confirmation ID. Then the application will exit.
