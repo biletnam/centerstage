@@ -62,11 +62,12 @@ There are few **assumptions** that the system makes.
 - to run the application (Simulation)
     - cd to **target** folder
     - run command > java -jar -Dapplication.numRows=9 -Dapplication.numSeats=33 -Dapplication.holdExpiry=5 -Dapplication.threadCount=10 ticket-service-0.0.1-SNAPSHOT.jar
-        - application.numRows = Number seating rows
-        - application.numSeats = Number of seats per row
-        - application.holdExpiry = How long a customer can hold seats
-        - application.threadCount= number of threads to simulate the concurrent reservation request.
-- You are all set to see the simulation
+        - All environment variables have default values assigned and are optional.
+        - application.numRows = Number seating rows (default 9).
+        - application.numSeats = Number of seats per row (default 33).
+        - application.holdExpiry = How long a customer can hold seats (default 5).
+        - application.threadCount= number of threads to simulate the concurrent reservation request (default 20). 
+- You are all set to see the simulation.
 
 - The application will run a simulation for concurrent booking requests.
     - The application will generate a random set hold request between (1 and (Number of seats per row + 5)).
