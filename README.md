@@ -47,10 +47,30 @@ Most of the heavy lifting is done by the **_com.challenge.centerstage.ticketserv
 
 There are few **assumptions** that the system makes.
 
-* Since it is a performance venue, the system tries to assign seats as close to the stage as possible.
-* The system always assigns contiguous seating and does not allow the number of seats to hold more than the number of seats per row.
-* A customer can hold seats for a certain number of seconds (pre-defined by the system) after which the hold will expire and the seats can be reassigned to the subsequent requests.
-* The service can stay open till all seats have been reserved. 
+- Since it is a performance venue, the system tries to assign seats as close to the stage as possible.
+- The system always assigns contiguous seating and does not allow the number of seats to hold more than the number of seats per row.
+- A customer can hold seats for a certain number of seconds (pre-defined by the system) after which the hold will expire and the seats can be reassigned to the subsequent requests.
+- The service can stay open till all seats have been reserved. 
 
 
-#Installing
+### Running Examples
+- Requires JDK 8.
+- Download the zip or clone the Git repository.
+- Unzip the zip file (if you downloaded one)
+- (cd) to folder containing pom.xml
+- to build run command > mvn clean package
+- to run the tests > mvn clean tests
+- to run the application (Simulation)
+    - cd to **target** folder
+    - run command > java -jar -Dapplication.numRows=9 -Dapplication.numSeats=33 -Dapplication.holdExpiry=5 -Dapplication.threadCount=10 ticket-service-0.0.1-SNAPSHOT.jar
+        - application.numRows = Number seating rows
+        - application.numSeats = Number of seats per row
+        - application.holdExpiry = How long a customer can hold seats
+        - application.threadCount= number of threads to simulate the concurrent reservation request.
+- You are all set to see the simulation
+
+- The application will run a simulation for concurrent booking requests.
+    - The application will generate a random set hold request between (1 and (Number of seats per row + 5)).
+    - The application will hold the seats on behalf of customer for an random period of time between (1sec and holdExpiry secs).
+    - The application will log all requests and responses.
+    - At the end when the Venue is sold out, the application will print the reservation seat map with reservation confirmation ID. 
