@@ -58,8 +58,7 @@ There are few **assumptions** that the system makes.
 - Download the zip or clone the Git repository.
 - Unzip the zip file (if you downloaded one)
 - (cd) to folder containing pom.xml
-- to build run command > mvn clean package
-- to run the tests > mvn clean tests
+- to build and run the tests, use command > mvn clean package
 - to run the application (Simulation)
     - cd to **target** folder
     - run command > java -jar -Dapplication.numRows=9 -Dapplication.numSeats=33 -Dapplication.holdExpiry=5 -Dapplication.threadCount=10 ticket-service-0.0.1-SNAPSHOT.jar

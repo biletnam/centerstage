@@ -115,7 +115,7 @@ public class TicketServiceApplication implements CommandLineRunner {
                     return;
                 }
                 String format = ("||| %s | %s | %s | %s | %s |||%n");
-                LOGGER.info("REDERVED - HoldID : " + seatHold.getId() + " ConfirmationID : " + confirmation + " Customer ID : " + email + " Total seats : " + seatHold.getSeats().size());
+                LOGGER.info("RESERVED - HoldID : " + seatHold.getId() + " ConfirmationID : " + confirmation + " Customer ID : " + email + " Total seats : " + seatHold.getSeats().size());
                 return;
             } else {
                 if (seatHold.getErrorMessage().contains("Party size")) {
