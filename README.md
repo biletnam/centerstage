@@ -65,7 +65,7 @@ There are few **assumptions** that the system makes.
         - All environment variables have default values assigned and are optional.
         - application.numRows = Number seating rows (default 9).
         - application.numSeats = Number of seats per row (default 33).
-        - application.holdExpiry = How long a customer can hold seats (default 5).
+        - application.holdExpiry = How long a customer can hold seats (default 20).
         - application.threadCount= number of threads to simulate the concurrent reservation request (default 20). 
 - You are all set to see the simulation.
 
